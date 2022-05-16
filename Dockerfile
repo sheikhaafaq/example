@@ -32,7 +32,7 @@ RUN git  clone https://${USERNAME}:${PASSWORD}@bitbucket.org/surveysparrow/surve
 
 # Update parameters
 RUN cd parameter-store/constants/ && \
-    sed -i 's@worker: false@' "worker: false"'@' defaults.js && \
+    sed -i 's@worker: false@'"worker: false"'@' defaults.js && \
     sed -i 's@BASE_SUB_DOMAIN@'"app"'@' defaults.js && \
     sed -i 's@DOMAIN@'"surveytools"'@' defaults.js && \
     sed -i 's@WORK_DIR@'"../surveysparrow-comprinno/config"'@' defaults.js 
