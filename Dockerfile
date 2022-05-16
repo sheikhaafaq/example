@@ -54,15 +54,15 @@ RUN cd surveysparrow-comprinno/ && \
     rm -rf ./client/dist 
 
 
-#--------------STAGING -------------------------
-FROM node:18-alpine3.14
+# #--------------STAGING -------------------------
+# FROM node:18-alpine3.14
 
-# Create app directory
-WORKDIR /app
+# # Create app directory
+# WORKDIR /app
 
-# Copy content from Base
-COPY --from=builder /app/surveysparrow-comprinno .
-# Environment varaible to specify environment
+# # Copy content from Base
+# COPY --from=builder /app/surveysparrow-comprinno .
+# # Environment varaible to specify environment
 ENV NODE_ENV=staging
 
 # Endpoint localhost:8080
